@@ -93,15 +93,35 @@ git init
 dvc init
 ```
 * As you work on the code, continually commit changes. Generated models you want to keep must be committed to dvc.
+```bash
+mkdir ../local remote_dir
+dvc remote add -d local_remote_dir
+dvc remote list
+```
 * Connect your local git repo to GitHub.
 * Setup GitHub Actions on your repo. You can use one of the pre-made GitHub Actions if at a minimum it runs pytest and flake8 on push and requires both to pass without error.
+
 * Make sure you set up the GitHub Action to have the same version of Python as you used in development.
 * Set up a remote repository for dvc.
+``` bash
+dvc remote add -d storage s3://mybucket/dvcstore
+git add .dvc/config
+git commit -m "Configure remote storage"
+```
 
 # Data
 * Download census.csv and commit it to dvc.
+```bash 
+dvc add ./data/census.csv
+git add .gitignore ./data/census.csv
+```
 * This data is messy, try to open it in pandas and see what you get.
+
 * To clean it, use your favorite text editor to remove all spaces.
+
+```python 
+# remove all spaces
+```
 * Commit this modified data to dvc (we often want to keep the raw data untouched but then can keep updating the cooked version).
 
 # Model

@@ -119,7 +119,8 @@ def slice_data(data):
         
         precision, recall, fbeta = compute_model_metrics(y=y_test, preds=pred)
 
-        with open("notebook/data_slicing_score.txt", "a") as f:
+        with open("notebook/data_slicing_score
+        .txt", "a") as f:
             f.write(f"{cat}[{cls}]\n")
             f.write(f"precision: {precision}\n")
             f.write(f"recall: {recall}\n")

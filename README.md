@@ -1,7 +1,5 @@
 # udacity_c3_cencus
-
-Working in a command line environment is recommended for ease of use with git and dvc. If on Windows, WSL1 or 2 is recommended.
-
+ML pipeline to expose API on Heroku
 # Conda Environment Set up
 * Download and install conda if you don’t have it already.
 ## Instructions
@@ -45,7 +43,7 @@ est-Linux-x86_64.sh`` files.
 Then create a new environment using code and activate it:
 
 ```bash
-> conda create -n [envname] "python=3.8" scikit-learn dvc pandas numpy pytest jupyter jupyterlab fastapi uvicorn -c conda-forge
+> conda create -n [envname] "python=3.8" scikit-learn dvc pandas numpy pytest jupyter jupyterlab fastapi uvicorn -c conda-forge dvc-s3 sklearn
 > conda activate [envname]
 ```
 

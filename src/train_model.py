@@ -17,7 +17,6 @@ install()
 # Add the necessary imports for the starter code.
 from data import process_data
 import model
-import xgboost
 
 def train_model():
     # Read the training data with folds 
@@ -36,13 +35,13 @@ def train_model():
         "native-country",
     ]
 
-    X_train, y_train, encoder, lb = process_data(
+    X_train, y_train, _, _ = process_data(
         train, categorical_features=cat_features, label="salary", training=True
     )
 
     # Proces the test data with the process_data function.
 
-    X_test, y_test, encoder, lb = process_data(test, categorical_features=cat_features, label="salary", training=False)
+    X_test, y_test, _, _ = process_data(test, categorical_features=cat_features, label="salary", training=False)
 
     # Train and save a model.
     _model = model.train_model(X_train = X_train, y_train = y_train)

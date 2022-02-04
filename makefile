@@ -4,8 +4,7 @@ PIP = $(VENV)/bin/pip
 
 
 
-run: 
-	$(VENV)/bin/activate
+run: $(VENV)/bin/activate
 	$(PYTHON) app.py
 
 

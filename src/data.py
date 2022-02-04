@@ -11,18 +11,27 @@ from joblib import dump, load
 
 
 def get_cat_features():
+    """Retrieving categorical features from the dataset
+
+    Returns:
+        cat_features: Return the list of categorical columns of the data
+    """
     cat_features = [
         "workclass",
         "education",
-        "marital-status",
+        "marital_status",
         "occupation",
         "relationship",
         "race",
         "sex",
-        "native-country",
+        "native_country",
     ]
     return cat_features
 
+
+def split_data(data, test_size:int ):
+    train, test = train_test_split(data, test_size = test_size)
+    return train, test
 
 
 def process_data(
@@ -89,7 +98,5 @@ def process_data(
             pass
 
     X = np.concatenate([X_continuous, X_categorical], axis=1)
+    
     return X, y, encoder, lb
-
-
-

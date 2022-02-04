@@ -13,12 +13,11 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from sklearn.ensemble import RandomForestClassifier
 
-import data
-from data import get_cat_features, process_data
+from src.data import get_cat_features, process_data
 
 def train_model(X_train, y_train):
     """
-    Trains a machine learning model and returns it.
+    Trains a machine learning model (xgboost) and returns it.
 
     Inputs
     ------
@@ -26,37 +25,45 @@ def train_model(X_train, y_train):
         Training data.
     y_train : np.array
         Labels.
+
     Returns
     -------
     model
         Trained machine learning model.
     """
-    # initialize the model 
-    rfc = RandomForestClassifier(random_state=42)
+    # initialize the xgboost model 
+    model = XGBClassifier(use_label_encoder=False, eval_metric='mlogloss')
 
-    PARAM_GRID = { 
-        'n_estimators': [200, 500],
-        'max_features': ['auto', 'sqrt', 'log2'],
-        'max_depth' : [4,5,6,7,8],
-        'criterion' :['gini', 'entropy']
-    }
-
-
-    grid_search = GridSearchCV(
-        estimator=rfc,
-        param_grid=PARAM_GRID,
-        scoring = 'roc_auc',
-        n_jobs = 1,
-        cv = 5,
-        verbose=True
-    )
+    XGBClassifier(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+            colsample_bynode=1, colsample_bytree=1, eval_metric='mlogloss',
+            gamma=0, gpu_id=-1, importance_type='gain',
+            interaction_constraints='', learning_rate=0.300000012,
+            max_delta_step=0, max_depth=6, min_child_weight=1,
+            monotone_constraints='()', n_estimators=100, n_jobs=16,
+            num_parallel_tree=1, objective='multi:softprob', random_state=0,
+            reg_alpha=0, reg_lambda=1, scale_pos_weight=None, subsample=1,
+            tree_method='exact', use_label_encoder=False,
+            validate_parameters=1, verbosity=None)
+    
     # fit model on training data
-    grid_search.fit(X_train, y_train)
+    model.fit(X_train, y_train)
 
     # best model trained by GridSearch.
-    best_model = grid_search.best_estimator_
+    #best_model = grid_search.best_estimator_
+
+    dump(model, "model/xgboost.pkl")
     
-    return best_model 
+    return model
+
+
+def xgb_inference(model, X):
+    y_pred = model.predict(X)
+    return y_pred
+
+
+def xgb_accuracy(y, preds):
+    accuracy = accuracy_score(y, preds)
+    return accuracy
 
 
 def inference(model, X):
@@ -101,12 +108,12 @@ def compute_model_metrics(y, preds):
 
 
 def slice_data(data):
-    """ Function for calculating descriptive stats on slices of the Iris dataset."""
+    """ Function for evaluation metrics on slices of the dataset."""
     
     enc = load("model/encoder.joblib")
     lb = load("model/lb.joblib")
-    best_model = load("model/random_forest.pkl")
-
+    xgboost_model = load("model/xgboost.pkl")
+    
     # categories
     categorical_features = get_cat_features()
     for cat in categorical_features:
@@ -115,26 +122,28 @@ def slice_data(data):
             X_test, y_test, _, _ = process_data(df_temp, categorical_features=get_cat_features(), label="salary", encoder=enc, lb=lb,
             training=False)
 
-        pred = inference(model=best_model, X=X_test)
-        
-        precision, recall, fbeta = compute_model_metrics(y=y_test, preds=pred)
-
-        with open("notebook/data_slicing_score
-        .txt", "a") as f:
-            f.write(f"{cat}[{cls}]\n")
-            f.write(f"precision: {precision}\n")
-            f.write(f"recall: {recall}\n")
-            f.write(f"fbeta: {fbeta}\n")
-            f.write("===================================\n")
+            pred = xgb_inference(model=xgboost_model, X=X_test)
+            precision, recall, fbeta = compute_model_metrics(y=y_test, preds=pred)
+            accuracy = xgb_accuracy(y=y_test, preds=pred)
+            with open("notebook/slicing_score.txt", "a") as f:
+                f.write(f"{cat}[{cls}]\n")
+                f.write(f"precision: {precision}\n")
+                f.write(f"recall: {recall}\n")
+                f.write(f"fbeta: {fbeta}\n")
+                f.write(f"accuracy: {accuracy}\n")
+                f.write("===================================\n")
 
 
 
 if __name__ == '__main__':
     df = pd.read_csv("data/processed/processed_census.csv")
-    train, test = train_test_split(df, test_size = 0.2)
+    train, test = train_test_split(df, test_size = 0.3)
     X_train, y_train, encoder, lb = data.process_data(
         train, categorical_features=data.get_cat_features(), label="salary", training=True
     )
+
+    dump(encoder, "model/encoder.joblib")
+    dump(lb, "model/lb.joblib")
     best_model = train_model(X_train, y_train)
     slice_data(data=test)
 

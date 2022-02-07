@@ -9,7 +9,6 @@ from sklearn.model_selection import train_test_split
 from joblib import dump, load
 
 
-
 def get_cat_features():
     """Retrieving categorical features from the dataset
 

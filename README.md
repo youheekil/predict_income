@@ -1,68 +1,5 @@
 # udacity_c3_cencus
 ML pipeline to expose API on Heroku
-# Conda Environment Set up
-* Download and install conda if you don’t have it already.
-## Instructions
-1. create ``get.sh``
-
-```sh
-# get.sh
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-```
-
-2. and run 
-```bash
-> cat get.sh # for checking contents of get.sh file
-> bash get.sh
-> bash Miniconda3-latest-Linux-x86_64.sh
-```
-type `yes` and then set the path workspace as 
-```bash
-> {pwd}/miniconda3
-```
-
-**make sure to set the path of workplace after checking current working directory in another terminal** 
-
-```bash
-> pwd # print current working directory
-```
-
-3. modify ``.gitgnore`` file
-
-```gitgnore
-# conda for gitpod env
-anaconda3
-miniconda3
-```
-
-4. after pushing it to git remove ``get.sh``, ``Miniconda3-lat
-est-Linux-x86_64.sh`` files. 
-
-5. Create environment
-
-Then create a new environment using code and activate it:
-
-```bash
-> conda create -n [envname] "python=3.8" scikit-learn dvc pandas numpy pytest jupyter jupyterlab fastapi uvicorn -c conda-forge dvc-s3 sklearn
-> conda activate [envname]
-```
-
-OR 
-
-create a new environment using the ``environment.yml``
-file provided in the root of the repository and activate it:
-
-
-```bash
-> conda env create -f environment.yml
-> conda activate [envname]
-```
-
-6. If you haven't installed git, please install git through conda
-
-```bash
-> conda install git
-```
 
 ## Repositories
 ```bash
@@ -101,7 +38,7 @@ dvc remote list
 
 * Make sure you set up the GitHub Action to have the same version of Python as you used in development.
 * Set up a remote repository for dvc.
-``` bash
+```bash
 dvc remote add -d storage s3://mybucket/dvcstore
 git add .dvc/config
 git commit -m "Configure remote storage"
@@ -109,7 +46,7 @@ git commit -m "Configure remote storage"
 
 # Data
 * Download census.csv and commit it to dvc.
-```bash 
+```bash
 dvc add ./data/census.csv
 git add .gitignore ./data/census.csv
 ```

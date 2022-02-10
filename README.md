@@ -96,6 +96,7 @@ pytest src/model_test.py
 ```
 
 * Write a model card using the provided template.
+- document/model_card_template.md
 
 # API Creation
 *  Create a RESTful API using FastAPI this must implement:

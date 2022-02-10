@@ -92,6 +92,49 @@ class Sex(str, Enum):
     FEMALE = 'Female'
 
 
+class Native_Country(str, Enum):
+        United_States = 'United-States',
+        Cuba = 'Cuba', 
+        Jamaica = 'Jamaica', 
+        India = 'India', 
+        Mexico = 'Mexico',
+        Puerto_Rico = 'Puerto-Rico', 
+        Honduras = 'Honduras', 
+        England = 'England', 
+        Canada = 'Canada', 
+        Germany = 'Germany', 
+        Iran = 'Iran',
+        Philippines = 'Philippines', 
+        Poland ='Poland', 
+        Columbia = 'Columbia', 
+        Cambodia = 'Cambodia', 
+        Thailand = 'Thailand',
+        Ecuador = 'Ecuador',
+        Laos = 'Laos', 
+        Taiwan = 'Taiwan', 
+        Haiti = 'Haiti', 
+        Portugal = 'Portugal',
+        Dominican_Republic = 'Dominican-Republic', 
+        El_Salvador = 'El-Salvador', 
+        France = 'France', 
+        Guatemala = 'Guatemala',
+        Italy = 'Italy', 
+        China = 'China', 
+        South = 'South', 
+        Japan = 'Japan', 
+        Yugoslavia = 'Yugoslavia', 
+        Peru = 'Peru',
+        Outlying_US = 'Outlying-US(Guam-USVI-etc)', 
+        Scotland = 'Scotland', 
+        Trinadad = 'Trinadad&Tobago',
+        Greece = 'Greece', 
+        Nicaragua = 'Nicaragua', 
+        Vietnam = 'Vietnam', 
+        Hong = 'Hong', 
+        Ireland = 'Ireland', 
+        Hungary = 'Hungary',
+        Holand_Netherlands = 'Holand-Netherlands'
+
 _encoder = load("model/encoder.joblib")
 _lb = load("model/lb.joblib")
 _model = load("model/xgboost.pkl")
@@ -117,7 +160,7 @@ async def create_prediction(
     capital_gain: int, 
     capital_loss: int, 
     hours_per_week: int, 
-    native_country: str):
+    native_country: Native_Country):
 
     data = {'age': [age], 
             'fnlgt':[fnlgt], 

@@ -2,40 +2,21 @@
 ML pipeline to expose API on Heroku
 
 ## Repositories
+> pip environment set up 
+```shell 
+git clone <github HTTPS filepath>
+virtualenv venv
+source venv/bin/activate
 
-* Set up `git` with `GitHub Actions`.
-> git 
-```shell
-git init
-ls -a
+# Install all dependencies of this file.
+
+pip install -r requirements.txt
 ```
-> github action 
-> dvc
-```shell
-dvc init
-ls -a # check the file 
-# create a local remote 
-# make the folder and tell it is your remote:
-mkdir ../local_remote_dir
-dvc remote add -d local_remote_dir # -d: default 
-dvc remote list
-# commit the changes to the .dvc/confi file to your version control 
-head .dvc/config
-# add two data (raw/census.csv, processed/processed_census.csv)
-dvc add raw/census.csv
-# add git .gitignore  raw/census.csv.dvc
-dvc add processed/processed_census.csv
-# git .gitignore processed/processed_census.csv.dvc
-# git commit -m "commit of tracked of data"
+> Set up git and dvc
 
-# send data to the local remote with 
-dvc push 
-
-# retrieve the data, use dvc pull 
-```
-* install dvc 
+* Install dvc 
 ```shell
-pip install dvc
+pip install 'dvc[s3]'
 ```
 * Create a directory for the project and initialize git and dvc.
 ```shell
@@ -60,6 +41,15 @@ dvc remote list
 dvc remote add -d storage s3://mybucket/dvcstore
 git add .dvc/config
 git commit -m "Configure remote storage"
+```
+
+* send data to the local remote with 
+```shell
+dvc push
+``` 
+* retrieve the data
+```shell
+dvc pull 
 ```
 
 # Data
@@ -94,17 +84,18 @@ python src/model.py
 ```shell
 pytest src/model_test.py
 ```
-
+```shell
+dvc add ./model/xgboost.pkl
+git add .gitignore ./model/xgboost.pkl
+```
 * Details of the model can be found in a model card (document/model_card_template.md)
 
 # API Creation
-*  Create a RESTful API using FastAPI this must implement:
-    * GET on the root giving a welcome message.
-    * POST that does model inference.
-    * Type hinting must be used.
-    * Use a Pydantic model to ingest the body from POST. This model should contain an example.
-   	 * Hint: the data has names with hyphens and Python does not allow those as variable names. Do not modify the column names in the csv and instead use the functionality of FastAPI/Pydantic/etc to deal with this.
-* Write 3 unit tests to test the API (one for the GET and two for POST, one that tests each prediction).
+
+- GET on the root giving a welcome message.
+- POST that does model inference.
+     This model should contain an example.
+- Write 3 unit tests to test the API (one for the GET and two for POST, one that tests each prediction).
 
 # API Deployment
 * Create a free Heroku account (for the next steps you can either use the web GUI or download the Heroku CLI).
@@ -113,3 +104,25 @@ pytest src/model_test.py
     * Hint: think about how paths will differ in your local environment vs. on Heroku.
     * Hint: development in Python is fast! But how fast you can iterate slows down if you rely on your CI/CD to fail before fixing an issue. I like to run flake8 locally before I commit changes.
 * Write a script that uses the requests module to do one POST on your live API.
+
+
+
+
+# confusion matrix
+```python 
+#importing confusion matrix
+from sklearn.metrics import confusion_matrix
+
+def plot_confusion_matrix(cm, classes, normalized=True, cmap='BuPu'):
+    plt.figure(figsize=[10, 8])
+    norm_cm = cm
+    if normalized:
+        norm_cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
+        sns.heatmap(norm_cm, annot=cm, fmt='g', xticklabels=classes, yticklabels=classes, cmap=cmap)
+
+
+cm = confusion_matrix(y_test, predictions)
+#call the confusion matrix function         
+plot_confusion_matrix(cm, ['class1', 'class2', 'class3','class4'])
+```
+

@@ -52,7 +52,6 @@ def train_model(X_train, y_train):
     #best_model = grid_search.best_estimator_
 
     dump(model, "model/xgboost.pkl")
-    
     return model
 
 
@@ -125,7 +124,7 @@ def slice_data(data):
             pred = xgb_inference(model=xgboost_model, X=X_test)
             precision, recall, fbeta = compute_model_metrics(y=y_test, preds=pred)
             accuracy = xgb_accuracy(y=y_test, preds=pred)
-            with open("notebook/slicing_score.txt", "a") as f:
+            with open("notebook/slice_output.txt", "a") as f:
                 f.write(f"{cat}[{cls}]\n")
                 f.write(f"precision: {precision}\n")
                 f.write(f"recall: {recall}\n")
@@ -138,12 +137,11 @@ def slice_data(data):
 if __name__ == '__main__':
     df = pd.read_csv("data/processed/processed_census.csv")
     train, test = train_test_split(df, test_size = 0.3)
-    X_train, y_train, encoder, lb = data.process_data(
-        train, categorical_features=data.get_cat_features(), label="salary", training=True
+    X_train, y_train, encoder, lb = process_data(
+        train, categorical_features=get_cat_features(), label="salary", training=True
     )
 
     dump(encoder, "model/encoder.joblib")
     dump(lb, "model/lb.joblib")
     best_model = train_model(X_train, y_train)
     slice_data(data=test)
-

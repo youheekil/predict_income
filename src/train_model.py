@@ -20,7 +20,7 @@ import model
 
 def train_model():
     # Read the training data with folds 
-    df = pd.read_csv("data/clean_data.csv")
+    df = pd.read_csv("data/processed_census.csv")
 
     train, test = train_test_split(df, test_size=0.20)
 

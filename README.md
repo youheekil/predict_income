@@ -2,37 +2,55 @@
 ML pipeline to expose API on Heroku
 
 ## Repositories
-```bash
-ls
+
+* Set up `git` with `GitHub Actions`.
+> git 
+```shell
+git init
+ls -a
+```
+> github action 
+> dvc
+```shell
+dvc init
+ls -a # check the file 
+# create a local remote 
+# make the folder and tell it is your remote:
+mkdir ../local_remote_dir
+dvc remote add -d local_remote_dir # -d: default 
+dvc remote list
+# commit the changes to the .dvc/confi file to your version control 
+head .dvc/config
+# add two data (raw/census.csv, processed/processed_census.csv)
+dvc add raw/census.csv
+# add git .gitignore  raw/census.csv.dvc
+dvc add processed/processed_census.csv
+# git .gitignore processed/processed_census.csv.dvc
+# git commit -m "commit of tracked of data"
+
+# send data to the local remote with 
+dvc push 
+
+# retrieve the data, use dvc pull 
+```
+* install dvc 
+```shell
+pip install dvc
+```
+* Create a directory for the project and initialize git and dvc.
+```shell
 git init
 dvc init
 ls -a # check the file 
-# create a local remote
-# make the folder and tell DVC it is your remote:
-mkdir ../local_remote_dir
-dvc remote add -d local_remote_dir # -d: default
-dvc remote list
-# then commit the changes to the .dvc/config file to your version control 
-head .dvc/config 
-dvc add sample.csv
-git add .gitignore sample.csv.dvc
-git commit -m "Initial commit of tracked sample.csv"
-# send data to the local remote with 
-dvc push 
-# retrieve the data, use dvc pull 
+```
 
-```
-* Create a directory for the project and initialize git and dvc.
-```bash
-git init
-dvc init
-```
 * As you work on the code, continually commit changes. Generated models you want to keep must be committed to dvc.
-```bash
+```shell
 mkdir ../local remote_dir
 dvc remote add -d local_remote_dir
 dvc remote list
 ```
+
 * Connect your local git repo to GitHub.
 * Setup GitHub Actions on your repo. You can use one of the pre-made GitHub Actions if at a minimum it runs pytest and flake8 on push and requires both to pass without error.
 
@@ -46,24 +64,37 @@ git commit -m "Configure remote storage"
 
 # Data
 * Download census.csv and commit it to dvc.
-```bash
-dvc add ./data/census.csv
-git add .gitignore ./data/census.csv
+```shell
+dvc add ./data/raw/census.csv
+git add .gitignore ./data/raw/census.csv
 ```
-* This data is messy, try to open it in pandas and see what you get.
+* Raw data is messy
+  * Removed space in each column
+  * Replaced '?' in data to NA
+  * Dropped NA
 
-* To clean it, use your favorite text editor to remove all spaces.
-
-```python 
-# remove all spaces
+```shell
+python src/clean_data.py
 ```
-* Commit this modified data to dvc (we often want to keep the raw data untouched but then can keep updating the cooked version).
+
+* Commit this modified data to dvc. 
+  * We kept the raw data untouched but then can keep updating the cooked version (processed).
+```shell
+dvc add ./data/processed/processed_census.csv
+git add .gitignore ./data/processed/processed_census.csv
+```
 
 # Model
-* Using the starter code, write a machine learning model that trains on the clean data and saves the model. Complete any function that has been started.
-* Write unit tests for at least 3 functions in the model code.
-* Write a function that outputs the performance of the model on slices of the data.
-    * Suggestion: for simplicity, the function can just output the performance on slices of just the categorical features.
+* train machine learning model on data, save and load the model and any categorical encoders
+model inference  determine the classification metrics.
+```shell
+python src/model.py
+```
+* Unit tests for 3 functions in the model code.
+```shell
+pytest src/model_test.py
+```
+
 * Write a model card using the provided template.
 
 # API Creation

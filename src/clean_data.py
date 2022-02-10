@@ -17,7 +17,8 @@ from src.data import get_cat_features
 
 
 def clean_data():
-    """ Cleaning data such as removing space in the columns and save it at data/processed folder
+    """
+    Cleaning data such as removing space in the columns and save it at data/processed folder
 
     Returns:
         clean_data: data without space
@@ -40,7 +41,8 @@ def clean_data():
 
 
 def removing_special_case(data):
-    """Removing ? in data to NA
+    """
+    Replaced ? in data to NA
 
     Args:
         data: data removed spaces from `removing_spaces` function
@@ -56,7 +58,8 @@ def removing_special_case(data):
 
 
 def removing_NA(data):
-    """Removing NA in data
+    """
+    Removing NA in data
 
     Args:
         data ([type]): data removed spaces and replaced special string cases ("?") to NA

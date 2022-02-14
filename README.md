@@ -37,8 +37,9 @@ dvc remote list
 
 * Make sure you set up the GitHub Action to have the same version of Python as you used in development.
 * Set up a remote repository for dvc.
+mybucket name is youheekil
 ```bash
-dvc remote add -d storage s3://mybucket/dvcstore
+dvc remote add -d storage s3://youheekil/dvcstore
 git add .dvc/config
 git commit -m "Configure remote storage"
 ```
@@ -57,6 +58,7 @@ dvc pull
 ```shell
 dvc add ./data/raw/census.csv
 git add .gitignore ./data/raw/census.csv
+dvc push
 ```
 * Raw data is messy
   * Removed space in each column
@@ -72,6 +74,7 @@ python src/clean_data.py
 ```shell
 dvc add ./data/processed/processed_census.csv
 git add .gitignore ./data/processed/processed_census.csv
+dvc push
 ```
 
 # Model

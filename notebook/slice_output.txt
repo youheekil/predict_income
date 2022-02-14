@@ -1938,3 +1938,1755 @@ recall: 1.0
 fbeta: 1.0
 accuracy: 1.0
 ===================================
+workclass[Private]
+precision: 0.7816091954022989
+recall: 0.6302780638516993
+fbeta: 0.6978335233751425
+accuracy: 0.8816964285714286
+===================================
+workclass[Self-emp-not-inc]
+precision: 0.8
+recall: 0.5419354838709678
+fbeta: 0.6461538461538462
+accuracy: 0.8148893360160966
+===================================
+workclass[State-gov]
+precision: 0.8082191780821918
+recall: 0.7375
+fbeta: 0.7712418300653595
+accuracy: 0.8638132295719845
+===================================
+workclass[Federal-gov]
+precision: 0.8135593220338984
+recall: 0.75
+fbeta: 0.7804878048780488
+accuracy: 0.8373493975903614
+===================================
+workclass[Self-emp-inc]
+precision: 0.782258064516129
+recall: 0.7348484848484849
+fbeta: 0.7578125
+accuracy: 0.7350427350427351
+===================================
+workclass[Local-gov]
+precision: 0.7747747747747747
+recall: 0.7166666666666667
+fbeta: 0.7445887445887446
+accuracy: 0.8513853904282116
+===================================
+workclass[Without-pay]
+precision: 0.0
+recall: 1.0
+fbeta: 0.0
+accuracy: 0.5
+===================================
+education[Some-college]
+precision: 0.7336683417085427
+recall: 0.5270758122743683
+fbeta: 0.6134453781512605
+accuracy: 0.8578052550231839
+===================================
+education[HS-grad]
+precision: 0.8104575163398693
+recall: 0.37462235649546827
+fbeta: 0.512396694214876
+accuracy: 0.882587064676617
+===================================
+education[Bachelors]
+precision: 0.7821100917431193
+recall: 0.7875288683602771
+fbeta: 0.7848101265822784
+accuracy: 0.8194980694980695
+===================================
+education[10th]
+precision: 1.0
+recall: 0.2857142857142857
+fbeta: 0.4444444444444445
+accuracy: 0.935064935064935
+===================================
+education[1st-4th]
+precision: 1.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.95
+===================================
+education[9th]
+precision: 1.0
+recall: 0.4
+fbeta: 0.5714285714285715
+accuracy: 0.970873786407767
+===================================
+education[5th-6th]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+education[Assoc-voc]
+precision: 0.6923076923076923
+recall: 0.6617647058823529
+fbeta: 0.6766917293233082
+accuracy: 0.8453237410071942
+===================================
+education[Prof-school]
+precision: 0.8809523809523809
+recall: 0.9024390243902439
+fbeta: 0.8915662650602411
+accuracy: 0.8301886792452831
+===================================
+education[11th]
+precision: 1.0
+recall: 0.45454545454545453
+fbeta: 0.625
+accuracy: 0.9647058823529412
+===================================
+education[Masters]
+precision: 0.8190954773869347
+recall: 0.8810810810810811
+fbeta: 0.8489583333333334
+accuracy: 0.8309037900874635
+===================================
+education[Doctorate]
+precision: 0.7868852459016393
+recall: 0.9230769230769231
+fbeta: 0.8495575221238939
+accuracy: 0.7638888888888888
+===================================
+education[Assoc-acdm]
+precision: 0.6829268292682927
+recall: 0.6829268292682927
+fbeta: 0.6829268292682927
+accuracy: 0.8497109826589595
+===================================
+education[7th-8th]
+precision: 0.5
+recall: 0.07692307692307693
+fbeta: 0.13333333333333336
+accuracy: 0.8818181818181818
+===================================
+education[12th]
+precision: 1.0
+recall: 0.5714285714285714
+fbeta: 0.7272727272727273
+accuracy: 0.958904109589041
+===================================
+education[Preschool]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+marital_status[Never-married]
+precision: 0.8979591836734694
+recall: 0.42718446601941745
+fbeta: 0.5789473684210527
+accuracy: 0.9669762641898865
+===================================
+marital_status[Separated]
+precision: 1.0
+recall: 0.4166666666666667
+fbeta: 0.5882352941176471
+accuracy: 0.9625668449197861
+===================================
+marital_status[Married-civ-spouse]
+precision: 0.7791304347826087
+recall: 0.6951124903025602
+fbeta: 0.7347273472734729
+accuracy: 0.7706487061325771
+===================================
+marital_status[Divorced]
+precision: 0.825
+recall: 0.3707865168539326
+fbeta: 0.5116279069767442
+accuracy: 0.9240963855421687
+===================================
+marital_status[Widowed]
+precision: 0.6666666666666666
+recall: 0.2857142857142857
+fbeta: 0.4
+accuracy: 0.8853503184713376
+===================================
+marital_status[Married-spouse-absent]
+precision: 0.5
+recall: 0.14285714285714285
+fbeta: 0.22222222222222224
+accuracy: 0.9285714285714286
+===================================
+marital_status[Married-AF-spouse]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+occupation[Protective-serv]
+precision: 0.8043478260869565
+recall: 0.7551020408163265
+fbeta: 0.7789473684210526
+accuracy: 0.8421052631578947
+===================================
+occupation[Other-service]
+precision: 0.7777777777777778
+recall: 0.28
+fbeta: 0.4117647058823529
+accuracy: 0.967479674796748
+===================================
+occupation[Exec-managerial]
+precision: 0.8108108108108109
+recall: 0.7936507936507936
+fbeta: 0.8021390374331551
+accuracy: 0.8170580964153276
+===================================
+occupation[Farming-fishing]
+precision: 0.6
+recall: 0.4090909090909091
+fbeta: 0.4864864864864865
+accuracy: 0.900523560209424
+===================================
+occupation[Machine-op-inspct]
+precision: 0.7692307692307693
+recall: 0.4
+fbeta: 0.5263157894736842
+accuracy: 0.9132530120481928
+===================================
+occupation[Tech-support]
+precision: 0.7924528301886793
+recall: 0.84
+fbeta: 0.8155339805825242
+accuracy: 0.8834355828220859
+===================================
+occupation[Handlers-cleaners]
+precision: 0.6
+recall: 0.16666666666666666
+fbeta: 0.2608695652173913
+accuracy: 0.9333333333333333
+===================================
+occupation[Prof-specialty]
+precision: 0.8087855297157622
+recall: 0.810880829015544
+fbeta: 0.8098318240620958
+accuracy: 0.8213851761846902
+===================================
+occupation[Craft-repair]
+precision: 0.7065217391304348
+recall: 0.3551912568306011
+fbeta: 0.4727272727272728
+accuracy: 0.8294117647058824
+===================================
+occupation[Adm-clerical]
+precision: 0.6911764705882353
+recall: 0.4845360824742268
+fbeta: 0.5696969696969696
+accuracy: 0.9017980636237898
+===================================
+occupation[Sales]
+precision: 0.7625
+recall: 0.6009852216748769
+fbeta: 0.6721763085399449
+accuracy: 0.8337988826815642
+===================================
+occupation[Transport-moving]
+precision: 0.8333333333333334
+recall: 0.3333333333333333
+fbeta: 0.47619047619047616
+accuracy: 0.8594249201277955
+===================================
+occupation[Priv-house-serv]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+occupation[Armed-Forces]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+relationship[Not-in-family]
+precision: 0.8625
+recall: 0.3689839572192513
+fbeta: 0.5168539325842697
+accuracy: 0.9181472081218274
+===================================
+relationship[Husband]
+precision: 0.7841796875
+recall: 0.7031523642732049
+fbeta: 0.7414589104339796
+accuracy: 0.7757308770524629
+===================================
+relationship[Own-child]
+precision: 0.6666666666666666
+recall: 0.25
+fbeta: 0.36363636363636365
+accuracy: 0.9919540229885058
+===================================
+relationship[Unmarried]
+precision: 0.8095238095238095
+recall: 0.4358974358974359
+fbeta: 0.5666666666666667
+accuracy: 0.9591836734693877
+===================================
+relationship[Other-relative]
+precision: 0.5
+recall: 0.25
+fbeta: 0.3333333333333333
+accuracy: 0.9767441860465116
+===================================
+relationship[Wife]
+precision: 0.746031746031746
+recall: 0.6619718309859155
+fbeta: 0.7014925373134329
+accuracy: 0.7153024911032029
+===================================
+race[Black]
+precision: 0.8448275862068966
+recall: 0.620253164556962
+fbeta: 0.7153284671532847
+accuracy: 0.9296028880866426
+===================================
+race[White]
+precision: 0.7821180555555556
+recall: 0.65007215007215
+fbeta: 0.7100078802206462
+accuracy: 0.8585703305149884
+===================================
+race[Asian-Pac-Islander]
+precision: 0.775
+recall: 0.7045454545454546
+fbeta: 0.7380952380952381
+accuracy: 0.8777777777777778
+===================================
+race[Amer-Indian-Eskimo]
+precision: 0.6666666666666666
+recall: 0.25
+fbeta: 0.36363636363636365
+accuracy: 0.851063829787234
+===================================
+race[Other]
+precision: 1.0
+recall: 0.6
+fbeta: 0.7499999999999999
+accuracy: 0.9583333333333334
+===================================
+sex[Female]
+precision: 0.7894736842105263
+recall: 0.574468085106383
+fbeta: 0.665024630541872
+accuracy: 0.9300771208226221
+===================================
+sex[Male]
+precision: 0.784331797235023
+recall: 0.6612276612276612
+fbeta: 0.7175379426644182
+accuracy: 0.836105675146771
+===================================
+native_country[United-States]
+precision: 0.7824978759558199
+recall: 0.6458625525946704
+fbeta: 0.7076450249711871
+accuracy: 0.8615104640582347
+===================================
+native_country[Mexico]
+precision: 1.0
+recall: 0.4
+fbeta: 0.5714285714285715
+accuracy: 0.975
+===================================
+native_country[El-Salvador]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Trinadad&Tobago]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[India]
+precision: 1.0
+recall: 0.8333333333333334
+fbeta: 0.9090909090909091
+accuracy: 0.9090909090909091
+===================================
+native_country[Taiwan]
+precision: 0.8
+recall: 0.8
+fbeta: 0.8000000000000002
+accuracy: 0.8
+===================================
+native_country[Cuba]
+precision: 1.0
+recall: 0.75
+fbeta: 0.8571428571428571
+accuracy: 0.95
+===================================
+native_country[Philippines]
+precision: 0.75
+recall: 0.6
+fbeta: 0.6666666666666665
+accuracy: 0.85
+===================================
+native_country[Germany]
+precision: 0.8888888888888888
+recall: 1.0
+fbeta: 0.9411764705882353
+accuracy: 0.95
+===================================
+native_country[Puerto-Rico]
+precision: 1.0
+recall: 0.5
+fbeta: 0.6666666666666666
+accuracy: 0.9333333333333333
+===================================
+native_country[Haiti]
+precision: 1.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.875
+===================================
+native_country[Dominican-Republic]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Canada]
+precision: 0.8333333333333334
+recall: 0.625
+fbeta: 0.7142857142857143
+accuracy: 0.8333333333333334
+===================================
+native_country[England]
+precision: 0.8333333333333334
+recall: 0.7142857142857143
+fbeta: 0.7692307692307692
+accuracy: 0.8
+===================================
+native_country[Outlying-US(Guam-USVI-etc)]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Poland]
+precision: 1.0
+recall: 0.5
+fbeta: 0.6666666666666666
+accuracy: 0.8888888888888888
+===================================
+native_country[Vietnam]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Ireland]
+precision: 1.0
+recall: 0.5
+fbeta: 0.6666666666666666
+accuracy: 0.875
+===================================
+native_country[Japan]
+precision: 0.6
+recall: 1.0
+fbeta: 0.7499999999999999
+accuracy: 0.8333333333333334
+===================================
+native_country[China]
+precision: 1.0
+recall: 0.75
+fbeta: 0.8571428571428571
+accuracy: 0.9
+===================================
+native_country[Portugal]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Guatemala]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Laos]
+precision: 0.0
+recall: 1.0
+fbeta: 0.0
+accuracy: 0.75
+===================================
+native_country[Jamaica]
+precision: 0.5
+recall: 0.5
+fbeta: 0.5
+accuracy: 0.875
+===================================
+native_country[South]
+precision: 0.5
+recall: 0.3333333333333333
+fbeta: 0.4
+accuracy: 0.8333333333333334
+===================================
+native_country[Yugoslavia]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Nicaragua]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Greece]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[France]
+precision: 0.75
+recall: 1.0
+fbeta: 0.8571428571428571
+accuracy: 0.8
+===================================
+native_country[Iran]
+precision: 0.5
+recall: 1.0
+fbeta: 0.6666666666666666
+accuracy: 0.8333333333333334
+===================================
+native_country[Ecuador]
+precision: 1.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.75
+===================================
+native_country[Peru]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Italy]
+precision: 0.6666666666666666
+recall: 0.6666666666666666
+fbeta: 0.6666666666666666
+accuracy: 0.8461538461538461
+===================================
+native_country[Columbia]
+precision: 1.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.9
+===================================
+native_country[Thailand]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Honduras]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Cambodia]
+precision: 1.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.6666666666666666
+===================================
+native_country[Hungary]
+precision: 1.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.5
+===================================
+native_country[Scotland]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Hong]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+workclass[Self-emp-not-inc]
+precision: 0.7692307692307693
+recall: 0.5298013245033113
+fbeta: 0.627450980392157
+accuracy: 0.8111332007952287
+===================================
+workclass[Private]
+precision: 0.7791116446578632
+recall: 0.6419386745796242
+fbeta: 0.7039045553145338
+accuracy: 0.8778250167822779
+===================================
+workclass[State-gov]
+precision: 0.7321428571428571
+recall: 0.6029411764705882
+fbeta: 0.6612903225806451
+accuracy: 0.825
+===================================
+workclass[Self-emp-inc]
+precision: 0.7606837606837606
+recall: 0.839622641509434
+fbeta: 0.7982062780269058
+accuracy: 0.784688995215311
+===================================
+workclass[Local-gov]
+precision: 0.7364341085271318
+recall: 0.811965811965812
+fbeta: 0.7723577235772358
+accuracy: 0.8679245283018868
+===================================
+workclass[Federal-gov]
+precision: 0.75
+recall: 0.7377049180327869
+fbeta: 0.743801652892562
+accuracy: 0.8306010928961749
+===================================
+workclass[Without-pay]
+precision: 0.0
+recall: 1.0
+fbeta: 0.0
+accuracy: 0.8
+===================================
+education[HS-grad]
+precision: 0.7640449438202247
+recall: 0.39766081871345027
+fbeta: 0.5230769230769231
+accuracy: 0.8746841839312784
+===================================
+education[Some-college]
+precision: 0.7236842105263158
+recall: 0.5789473684210527
+fbeta: 0.6432748538011696
+accuracy: 0.8636363636363636
+===================================
+education[Bachelors]
+precision: 0.7655172413793103
+recall: 0.8024096385542169
+fbeta: 0.7835294117647059
+accuracy: 0.816
+===================================
+education[7th-8th]
+precision: 1.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.9705882352941176
+===================================
+education[Assoc-acdm]
+precision: 0.7551020408163265
+recall: 0.6607142857142857
+fbeta: 0.7047619047619047
+accuracy: 0.8584474885844748
+===================================
+education[Doctorate]
+precision: 0.84375
+recall: 0.9473684210526315
+fbeta: 0.8925619834710744
+accuracy: 0.8289473684210527
+===================================
+education[9th]
+precision: 1.0
+recall: 0.42857142857142855
+fbeta: 0.6
+accuracy: 0.95
+===================================
+education[Masters]
+precision: 0.7978142076502732
+recall: 0.9240506329113924
+fbeta: 0.8563049853372434
+accuracy: 0.8439490445859873
+===================================
+education[Prof-school]
+precision: 0.8229166666666666
+recall: 0.9294117647058824
+fbeta: 0.87292817679558
+accuracy: 0.8067226890756303
+===================================
+education[Assoc-voc]
+precision: 0.6666666666666666
+recall: 0.5
+fbeta: 0.5714285714285715
+accuracy: 0.8181818181818182
+===================================
+education[10th]
+precision: 0.8571428571428571
+recall: 0.3157894736842105
+fbeta: 0.46153846153846156
+accuracy: 0.9166666666666666
+===================================
+education[11th]
+precision: 0.8571428571428571
+recall: 0.5454545454545454
+fbeta: 0.6666666666666665
+accuracy: 0.9716981132075472
+===================================
+education[1st-4th]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+education[12th]
+precision: 1.0
+recall: 0.2222222222222222
+fbeta: 0.3636363636363636
+accuracy: 0.9014084507042254
+===================================
+education[5th-6th]
+precision: 1.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.9333333333333333
+===================================
+education[Preschool]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+marital_status[Married-civ-spouse]
+precision: 0.7601351351351351
+recall: 0.6987577639751553
+fbeta: 0.7281553398058254
+accuracy: 0.759914255091104
+===================================
+marital_status[Never-married]
+precision: 0.8333333333333334
+recall: 0.4838709677419355
+fbeta: 0.6122448979591837
+accuracy: 0.9702349869451697
+===================================
+marital_status[Divorced]
+precision: 0.9183673469387755
+recall: 0.4787234042553192
+fbeta: 0.6293706293706295
+accuracy: 0.939150401836969
+===================================
+marital_status[Separated]
+precision: 0.75
+recall: 0.375
+fbeta: 0.5
+accuracy: 0.9381443298969072
+===================================
+marital_status[Widowed]
+precision: 0.75
+recall: 0.2
+fbeta: 0.31578947368421056
+accuracy: 0.9244186046511628
+===================================
+marital_status[Married-spouse-absent]
+precision: 1.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.9230769230769231
+===================================
+marital_status[Married-AF-spouse]
+precision: 0.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.25
+===================================
+occupation[Craft-repair]
+precision: 0.6732673267326733
+recall: 0.3756906077348066
+fbeta: 0.48226950354609927
+accuracy: 0.8195302843016069
+===================================
+occupation[Prof-specialty]
+precision: 0.7716535433070866
+recall: 0.8571428571428571
+fbeta: 0.8121546961325966
+accuracy: 0.8320987654320988
+===================================
+occupation[Tech-support]
+precision: 0.8703703703703703
+recall: 0.7230769230769231
+fbeta: 0.7899159663865546
+accuracy: 0.861878453038674
+===================================
+occupation[Farming-fishing]
+precision: 0.8
+recall: 0.3333333333333333
+fbeta: 0.47058823529411764
+accuracy: 0.9027027027027027
+===================================
+occupation[Sales]
+precision: 0.7455621301775148
+recall: 0.6737967914438503
+fbeta: 0.7078651685393259
+accuracy: 0.8577291381668947
+===================================
+occupation[Exec-managerial]
+precision: 0.7974683544303798
+recall: 0.8076923076923077
+fbeta: 0.802547770700637
+accuracy: 0.8121212121212121
+===================================
+occupation[Adm-clerical]
+precision: 0.6555555555555556
+recall: 0.5673076923076923
+fbeta: 0.6082474226804123
+accuracy: 0.9009126466753585
+===================================
+occupation[Transport-moving]
+precision: 0.7586206896551724
+recall: 0.3013698630136986
+fbeta: 0.4313725490196078
+accuracy: 0.8104575163398693
+===================================
+occupation[Other-service]
+precision: 1.0
+recall: 0.2692307692307692
+fbeta: 0.42424242424242425
+accuracy: 0.969551282051282
+===================================
+occupation[Priv-house-serv]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+occupation[Handlers-cleaners]
+precision: 0.8333333333333334
+recall: 0.3333333333333333
+fbeta: 0.47619047619047616
+accuracy: 0.9583333333333334
+===================================
+occupation[Protective-serv]
+precision: 0.8
+recall: 0.6666666666666666
+fbeta: 0.7272727272727272
+accuracy: 0.8175675675675675
+===================================
+occupation[Machine-op-inspct]
+precision: 0.9230769230769231
+recall: 0.23076923076923078
+fbeta: 0.36923076923076925
+accuracy: 0.8867403314917127
+===================================
+occupation[Armed-Forces]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+relationship[Husband]
+precision: 0.7682692307692308
+recall: 0.6941789748045178
+fbeta: 0.7293473299863076
+accuracy: 0.761847389558233
+===================================
+relationship[Wife]
+precision: 0.6971830985915493
+recall: 0.7557251908396947
+fbeta: 0.7252747252747254
+accuracy: 0.7321428571428571
+===================================
+relationship[Own-child]
+precision: 1.0
+recall: 0.5
+fbeta: 0.6666666666666666
+accuracy: 0.9932960893854749
+===================================
+relationship[Not-in-family]
+precision: 0.8586956521739131
+recall: 0.4514285714285714
+fbeta: 0.5917602996254681
+accuracy: 0.9274300932090546
+===================================
+relationship[Unmarried]
+precision: 0.7647058823529411
+recall: 0.3333333333333333
+fbeta: 0.4642857142857143
+accuracy: 0.9567099567099567
+===================================
+relationship[Other-relative]
+precision: 1.0
+recall: 0.5
+fbeta: 0.6666666666666666
+accuracy: 0.9826589595375722
+===================================
+race[White]
+precision: 0.7680067001675042
+recall: 0.664011585807386
+fbeta: 0.7122330097087378
+accuracy: 0.8572804314329738
+===================================
+race[Asian-Pac-Islander]
+precision: 0.7111111111111111
+recall: 0.6274509803921569
+fbeta: 0.6666666666666666
+accuracy: 0.8367346938775511
+===================================
+race[Black]
+precision: 0.8076923076923077
+recall: 0.6176470588235294
+fbeta: 0.7
+accuracy: 0.9345454545454546
+===================================
+race[Amer-Indian-Eskimo]
+precision: 0.8
+recall: 0.4
+fbeta: 0.5333333333333333
+accuracy: 0.8627450980392157
+===================================
+race[Other]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+sex[Male]
+precision: 0.7769784172661871
+recall: 0.6682134570765661
+fbeta: 0.7185031185031184
+accuracy: 0.8329632371083149
+===================================
+sex[Female]
+precision: 0.7180851063829787
+recall: 0.6108597285067874
+fbeta: 0.6601466992665037
+accuracy: 0.9297979797979798
+===================================
+native_country[United-States]
+precision: 0.768976897689769
+recall: 0.6609929078014184
+fbeta: 0.7109077040427154
+accuracy: 0.8621066036019647
+===================================
+native_country[Cuba]
+precision: 1.0
+recall: 0.6666666666666666
+fbeta: 0.8
+accuracy: 0.9166666666666666
+===================================
+native_country[Guatemala]
+precision: 1.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.9285714285714286
+===================================
+native_country[Vietnam]
+precision: 1.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.875
+===================================
+native_country[Philippines]
+precision: 0.7857142857142857
+recall: 0.6875
+fbeta: 0.7333333333333334
+accuracy: 0.8222222222222222
+===================================
+native_country[China]
+precision: 1.0
+recall: 0.75
+fbeta: 0.8571428571428571
+accuracy: 0.9375
+===================================
+native_country[Canada]
+precision: 1.0
+recall: 0.8
+fbeta: 0.888888888888889
+accuracy: 0.9090909090909091
+===================================
+native_country[Columbia]
+precision: 1.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.9333333333333333
+===================================
+native_country[India]
+precision: 0.625
+recall: 1.0
+fbeta: 0.7692307692307693
+accuracy: 0.8125
+===================================
+native_country[Italy]
+precision: 1.0
+recall: 0.6
+fbeta: 0.7499999999999999
+accuracy: 0.8571428571428571
+===================================
+native_country[South]
+precision: 0.5
+recall: 0.3333333333333333
+fbeta: 0.4
+accuracy: 0.8421052631578947
+===================================
+native_country[Portugal]
+precision: 1.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.8333333333333334
+===================================
+native_country[Laos]
+precision: 0.5
+recall: 1.0
+fbeta: 0.6666666666666666
+accuracy: 0.8
+===================================
+native_country[Poland]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Scotland]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Mexico]
+precision: 0.7142857142857143
+recall: 0.5
+fbeta: 0.588235294117647
+accuracy: 0.9421487603305785
+===================================
+native_country[England]
+precision: 0.5
+recall: 0.75
+fbeta: 0.6
+accuracy: 0.8
+===================================
+native_country[Puerto-Rico]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Nicaragua]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Germany]
+precision: 0.8333333333333334
+recall: 0.5
+fbeta: 0.625
+accuracy: 0.76
+===================================
+native_country[Japan]
+precision: 0.6
+recall: 0.6
+fbeta: 0.6
+accuracy: 0.6923076923076923
+===================================
+native_country[El-Salvador]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Outlying-US(Guam-USVI-etc)]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Yugoslavia]
+precision: 0.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.6
+===================================
+native_country[Jamaica]
+precision: 0.0
+recall: 1.0
+fbeta: 0.0
+accuracy: 0.9333333333333333
+===================================
+native_country[Peru]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Dominican-Republic]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Taiwan]
+precision: 0.6666666666666666
+recall: 1.0
+fbeta: 0.8
+accuracy: 0.875
+===================================
+native_country[Ecuador]
+precision: 0.5
+recall: 0.5
+fbeta: 0.5
+accuracy: 0.75
+===================================
+native_country[Iran]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Hungary]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Haiti]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Hong]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Trinadad&Tobago]
+precision: 1.0
+recall: 0.5
+fbeta: 0.6666666666666666
+accuracy: 0.6666666666666666
+===================================
+native_country[France]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Ireland]
+precision: 1.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.8
+===================================
+native_country[Greece]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Thailand]
+precision: 0.0
+recall: 1.0
+fbeta: 0.0
+accuracy: 0.5
+===================================
+native_country[Cambodia]
+precision: 1.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.5
+===================================
+native_country[Honduras]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Holand-Netherlands]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+workclass[Private]
+precision: 0.781750924784217
+recall: 0.6449643947100712
+fbeta: 0.7068004459308806
+accuracy: 0.8829810901001113
+===================================
+workclass[State-gov]
+precision: 0.8166666666666667
+recall: 0.6901408450704225
+fbeta: 0.748091603053435
+accuracy: 0.8695652173913043
+===================================
+workclass[Self-emp-not-inc]
+precision: 0.8426966292134831
+recall: 0.5639097744360902
+fbeta: 0.6756756756756758
+accuracy: 0.8554216867469879
+===================================
+workclass[Local-gov]
+precision: 0.7889908256880734
+recall: 0.7288135593220338
+fbeta: 0.7577092511013216
+accuracy: 0.8589743589743589
+===================================
+workclass[Federal-gov]
+precision: 0.7702702702702703
+recall: 0.76
+fbeta: 0.7651006711409396
+accuracy: 0.8097826086956522
+===================================
+workclass[Self-emp-inc]
+precision: 0.7610619469026548
+recall: 0.7678571428571429
+fbeta: 0.7644444444444445
+accuracy: 0.7464114832535885
+===================================
+workclass[Without-pay]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+education[Some-college]
+precision: 0.7013574660633484
+recall: 0.5783582089552238
+fbeta: 0.6339468302658487
+accuracy: 0.8651092690278824
+===================================
+education[Bachelors]
+precision: 0.7754629629629629
+recall: 0.7900943396226415
+fbeta: 0.7827102803738317
+accuracy: 0.8171091445427728
+===================================
+education[HS-grad]
+precision: 0.7975460122699386
+recall: 0.40372670807453415
+fbeta: 0.536082474226804
+accuracy: 0.8887240356083086
+===================================
+education[11th]
+precision: 1.0
+recall: 0.6428571428571429
+fbeta: 0.782608695652174
+accuracy: 0.976303317535545
+===================================
+education[7th-8th]
+precision: 1.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.9215686274509803
+===================================
+education[Assoc-voc]
+precision: 0.7230769230769231
+recall: 0.5875
+fbeta: 0.6482758620689656
+accuracy: 0.7984189723320159
+===================================
+education[Masters]
+precision: 0.8245614035087719
+recall: 0.8493975903614458
+fbeta: 0.8367952522255192
+accuracy: 0.8220064724919094
+===================================
+education[5th-6th]
+precision: 0.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.9622641509433962
+===================================
+education[10th]
+precision: 1.0
+recall: 0.2857142857142857
+fbeta: 0.4444444444444445
+accuracy: 0.9700598802395209
+===================================
+education[Assoc-acdm]
+precision: 0.8888888888888888
+recall: 0.7272727272727273
+fbeta: 0.7999999999999999
+accuracy: 0.900497512437811
+===================================
+education[12th]
+precision: 0.6666666666666666
+recall: 0.3333333333333333
+fbeta: 0.4444444444444444
+accuracy: 0.9438202247191011
+===================================
+education[Doctorate]
+precision: 0.873015873015873
+recall: 0.8870967741935484
+fbeta: 0.88
+accuracy: 0.8051948051948052
+===================================
+education[9th]
+precision: 1.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.9493670886075949
+===================================
+education[Preschool]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+education[Prof-school]
+precision: 0.8765432098765432
+recall: 0.9594594594594594
+fbeta: 0.9161290322580644
+accuracy: 0.8586956521739131
+===================================
+education[1st-4th]
+precision: 1.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.9655172413793104
+===================================
+marital_status[Never-married]
+precision: 0.8222222222222222
+recall: 0.37
+fbeta: 0.5103448275862069
+accuracy: 0.9641595153962645
+===================================
+marital_status[Married-civ-spouse]
+precision: 0.7827616534740546
+recall: 0.7069102462271644
+fbeta: 0.7429048414023373
+accuracy: 0.7787356321839081
+===================================
+marital_status[Divorced]
+precision: 0.8431372549019608
+recall: 0.4673913043478261
+fbeta: 0.6013986013986015
+accuracy: 0.931980906921241
+===================================
+marital_status[Widowed]
+precision: 0.8181818181818182
+recall: 0.4090909090909091
+fbeta: 0.5454545454545455
+accuracy: 0.9122807017543859
+===================================
+marital_status[Married-spouse-absent]
+precision: 0.5714285714285714
+recall: 0.5
+fbeta: 0.5333333333333333
+accuracy: 0.9
+===================================
+marital_status[Separated]
+precision: 1.0
+recall: 0.36363636363636365
+fbeta: 0.5333333333333333
+accuracy: 0.9623655913978495
+===================================
+marital_status[Married-AF-spouse]
+precision: 0.0
+recall: 1.0
+fbeta: 0.0
+accuracy: 0.6666666666666666
+===================================
+occupation[Machine-op-inspct]
+precision: 0.8
+recall: 0.3333333333333333
+fbeta: 0.47058823529411764
+accuracy: 0.9060052219321149
+===================================
+occupation[Exec-managerial]
+precision: 0.8388746803069054
+recall: 0.8241206030150754
+fbeta: 0.8314321926489227
+accuracy: 0.8240740740740741
+===================================
+occupation[Handlers-cleaners]
+precision: 0.6153846153846154
+recall: 0.4
+fbeta: 0.4848484848484849
+accuracy: 0.9388489208633094
+===================================
+occupation[Sales]
+precision: 0.7396449704142012
+recall: 0.6443298969072165
+fbeta: 0.6887052341597797
+accuracy: 0.8456284153005464
+===================================
+occupation[Craft-repair]
+precision: 0.67
+recall: 0.391812865497076
+fbeta: 0.4944649446494465
+accuracy: 0.8289637952559301
+===================================
+occupation[Other-service]
+precision: 0.7142857142857143
+recall: 0.19230769230769232
+fbeta: 0.30303030303030304
+accuracy: 0.9666182873730044
+===================================
+occupation[Adm-clerical]
+precision: 0.7301587301587301
+recall: 0.5
+fbeta: 0.5935483870967742
+accuracy: 0.916
+===================================
+occupation[Prof-specialty]
+precision: 0.8021978021978022
+recall: 0.8225352112676056
+fbeta: 0.812239221140473
+accuracy: 0.8295454545454546
+===================================
+occupation[Transport-moving]
+precision: 0.8611111111111112
+recall: 0.43661971830985913
+fbeta: 0.5794392523364487
+accuracy: 0.8664688427299704
+===================================
+occupation[Tech-support]
+precision: 0.7291666666666666
+recall: 0.6862745098039216
+fbeta: 0.7070707070707071
+accuracy: 0.8209876543209876
+===================================
+occupation[Protective-serv]
+precision: 0.78125
+recall: 0.5555555555555556
+fbeta: 0.6493506493506493
+accuracy: 0.7857142857142857
+===================================
+occupation[Farming-fishing]
+precision: 0.6666666666666666
+recall: 0.4
+fbeta: 0.5
+accuracy: 0.9157894736842105
+===================================
+occupation[Priv-house-serv]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+occupation[Armed-Forces]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+relationship[Other-relative]
+precision: 0.6666666666666666
+recall: 0.3333333333333333
+fbeta: 0.4444444444444444
+accuracy: 0.9720670391061452
+===================================
+relationship[Husband]
+precision: 0.7821782178217822
+recall: 0.7155797101449275
+fbeta: 0.7473982970671712
+accuracy: 0.7815057283142389
+===================================
+relationship[Own-child]
+precision: 0.6666666666666666
+recall: 0.23529411764705882
+fbeta: 0.3478260869565218
+accuracy: 0.9836601307189542
+===================================
+relationship[Not-in-family]
+precision: 0.813953488372093
+recall: 0.4117647058823529
+fbeta: 0.546875
+accuracy: 0.9257362355953905
+===================================
+relationship[Unmarried]
+precision: 0.8148148148148148
+recall: 0.4782608695652174
+fbeta: 0.6027397260273973
+accuracy: 0.9536741214057508
+===================================
+relationship[Wife]
+precision: 0.7983870967741935
+recall: 0.6644295302013423
+fbeta: 0.7252747252747253
+accuracy: 0.7532894736842105
+===================================
+race[White]
+precision: 0.7861524978089395
+recall: 0.668903803131991
+fbeta: 0.7228041901692184
+accuracy: 0.8669502997485979
+===================================
+race[Black]
+precision: 0.8305084745762712
+recall: 0.5632183908045977
+fbeta: 0.6712328767123288
+accuracy: 0.9162303664921466
+===================================
+race[Asian-Pac-Islander]
+precision: 0.7291666666666666
+recall: 0.6862745098039216
+fbeta: 0.7070707070707071
+accuracy: 0.8304093567251462
+===================================
+race[Other]
+precision: 1.0
+recall: 0.3333333333333333
+fbeta: 0.5
+accuracy: 0.9636363636363636
+===================================
+race[Amer-Indian-Eskimo]
+precision: 0.7142857142857143
+recall: 0.5
+fbeta: 0.588235294117647
+accuracy: 0.8888888888888888
+===================================
+sex[Female]
+precision: 0.8095238095238095
+recall: 0.5483870967741935
+fbeta: 0.6538461538461537
+accuracy: 0.9286422200198216
+===================================
+sex[Male]
+precision: 0.7821691176470589
+recall: 0.6840836012861736
+fbeta: 0.7298456260720413
+accuracy: 0.8430884184308842
+===================================
+native_country[Holand-Netherlands]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[United-States]
+precision: 0.7918088737201365
+recall: 0.6604982206405694
+fbeta: 0.7202173069460613
+accuracy: 0.8700666786808434
+===================================
+native_country[Philippines]
+precision: 0.8181818181818182
+recall: 1.0
+fbeta: 0.9
+accuracy: 0.9354838709677419
+===================================
+native_country[El-Salvador]
+precision: 0.5
+recall: 1.0
+fbeta: 0.6666666666666666
+accuracy: 0.9230769230769231
+===================================
+native_country[Cuba]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Columbia]
+precision: 0.0
+recall: 1.0
+fbeta: 0.0
+accuracy: 0.9230769230769231
+===================================
+native_country[Haiti]
+precision: 1.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.9
+===================================
+native_country[Greece]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Mexico]
+precision: 0.6666666666666666
+recall: 0.25
+fbeta: 0.36363636363636365
+accuracy: 0.9375
+===================================
+native_country[Dominican-Republic]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Ecuador]
+precision: 0.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.6666666666666666
+===================================
+native_country[England]
+precision: 0.75
+recall: 1.0
+fbeta: 0.8571428571428571
+accuracy: 0.9411764705882353
+===================================
+native_country[Iran]
+precision: 1.0
+recall: 0.75
+fbeta: 0.8571428571428571
+accuracy: 0.8333333333333334
+===================================
+native_country[Canada]
+precision: 0.5555555555555556
+recall: 0.625
+fbeta: 0.5882352941176471
+accuracy: 0.7083333333333334
+===================================
+native_country[Puerto-Rico]
+precision: 0.5
+recall: 0.5
+fbeta: 0.5
+accuracy: 0.9047619047619048
+===================================
+native_country[South]
+precision: 0.2
+recall: 0.5
+fbeta: 0.28571428571428575
+accuracy: 0.6875
+===================================
+native_country[Poland]
+precision: 1.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.8888888888888888
+===================================
+native_country[Cambodia]
+precision: 1.0
+recall: 0.3333333333333333
+fbeta: 0.5
+accuracy: 0.5
+===================================
+native_country[Germany]
+precision: 1.0
+recall: 0.75
+fbeta: 0.8571428571428571
+accuracy: 0.9473684210526315
+===================================
+native_country[Peru]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Jamaica]
+precision: 0.5
+recall: 0.5
+fbeta: 0.5
+accuracy: 0.8461538461538461
+===================================
+native_country[Guatemala]
+precision: 0.5
+recall: 1.0
+fbeta: 0.6666666666666666
+accuracy: 0.9166666666666666
+===================================
+native_country[Japan]
+precision: 0.8
+recall: 0.8
+fbeta: 0.8000000000000002
+accuracy: 0.8
+===================================
+native_country[Vietnam]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Italy]
+precision: 0.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.6363636363636364
+===================================
+native_country[India]
+precision: 1.0
+recall: 0.6666666666666666
+fbeta: 0.8
+accuracy: 0.9333333333333333
+===================================
+native_country[France]
+precision: 0.5
+recall: 0.5
+fbeta: 0.5
+accuracy: 0.7142857142857143
+===================================
+native_country[China]
+precision: 0.875
+recall: 0.875
+fbeta: 0.875
+accuracy: 0.8666666666666667
+===================================
+native_country[Portugal]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Taiwan]
+precision: 0.6666666666666666
+recall: 1.0
+fbeta: 0.8
+accuracy: 0.8888888888888888
+===================================
+native_country[Ireland]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Hong]
+precision: 1.0
+recall: 0.5
+fbeta: 0.6666666666666666
+accuracy: 0.6666666666666666
+===================================
+native_country[Trinadad&Tobago]
+precision: 1.0
+recall: 0.0
+fbeta: 0.0
+accuracy: 0.6666666666666666
+===================================
+native_country[Honduras]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Laos]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Outlying-US(Guam-USVI-etc)]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Yugoslavia]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Nicaragua]
+precision: 0.0
+recall: 1.0
+fbeta: 0.0
+accuracy: 0.75
+===================================
+native_country[Thailand]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================
+native_country[Scotland]
+precision: 1.0
+recall: 1.0
+fbeta: 1.0
+accuracy: 1.0
+===================================

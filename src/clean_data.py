@@ -72,7 +72,7 @@ def removing_NA(data):
     return data
 
 
-if __name__ == '__main__':
-    df = clean_data()
-    new_df = removing_special_case(data=df)
-    na_removed_df = removing_NA(data=new_df)
+def run_clean_data():
+        df = clean_data()
+        new_df = removing_special_case(data=df)
+        _ = removing_NA(data=new_df)

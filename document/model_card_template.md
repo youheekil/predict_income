@@ -16,6 +16,11 @@ This model was to predict the salary of a person based on a some attributes abou
 _Please include the metrics used and your model's performance on those metrics._
 The model evaluationi metrics were accuracy, precision, recall, and F1.
 
+* precision: 0.785828025477707
+* recall: 0.6615281501340483
+* fbeta: 0.7183406113537117
+* accuracy: 0.8717056190949776
+
 ## Ethical Considerations
 
 ## Caveats and Recommendations

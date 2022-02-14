@@ -55,12 +55,10 @@ def train_model(X_train, y_train):
     return model
 
 
-def xgb_inference(model, X):
-    y_pred = model.predict(X)
-    return y_pred
-
 
 def xgb_accuracy(y, preds):
+
+    """Run model (xgb) and return accuracy"""
     accuracy = accuracy_score(y, preds)
     return accuracy
 
@@ -103,7 +101,8 @@ def compute_model_metrics(y, preds):
     fbeta = fbeta_score(y, preds, beta=1, zero_division=1)
     precision = precision_score(y, preds, zero_division=1)
     recall = recall_score(y, preds, zero_division=1)
-    return precision, recall, fbeta
+    accuracy = accuracy_score(y, preds)
+    return precision, recall, fbeta, accuracy
 
 
 def slice_data(data):
@@ -121,9 +120,9 @@ def slice_data(data):
             X_test, y_test, _, _ = process_data(df_temp, categorical_features=get_cat_features(), label="salary", encoder=enc, lb=lb,
             training=False)
 
-            pred = xgb_inference(model=xgboost_model, X=X_test)
-            precision, recall, fbeta = compute_model_metrics(y=y_test, preds=pred)
-            accuracy = xgb_accuracy(y=y_test, preds=pred)
+            pred = inference(model=xgboost_model, X=X_test)
+            precision, recall, fbeta, accuracy = compute_model_metrics(y=y_test, preds=pred)
+            
             with open("notebook/slice_output.txt", "a") as f:
                 f.write(f"{cat}[{cls}]\n")
                 f.write(f"precision: {precision}\n")
@@ -131,17 +130,3 @@ def slice_data(data):
                 f.write(f"fbeta: {fbeta}\n")
                 f.write(f"accuracy: {accuracy}\n")
                 f.write("===================================\n")
-
-
-
-if __name__ == '__main__':
-    df = pd.read_csv("data/processed/processed_census.csv")
-    train, test = train_test_split(df, test_size = 0.3)
-    X_train, y_train, encoder, lb = process_data(
-        train, categorical_features=get_cat_features(), label="salary", training=True
-    )
-
-    dump(encoder, "model/encoder.joblib")
-    dump(lb, "model/lb.joblib")
-    best_model = train_model(X_train, y_train)
-    slice_data(data=test)

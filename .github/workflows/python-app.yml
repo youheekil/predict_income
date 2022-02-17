@@ -60,5 +60,4 @@ jobs:
             pytest
     
       - name: Pull data from DVC
-        run: pip install dvc
-            dvc pull data
+        run: dvc pull

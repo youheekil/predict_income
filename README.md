@@ -93,22 +93,14 @@ git add .gitignore ./model/xgboost.pkl
 ```
 * Details of the model can be found in a model card (document/model_card_template.md)
 
-# API Creation
+# API Creation with FastAPI
 
 - GET on the root giving a welcome message.
 - POST that does model inference.
      This model should contain an example.
 - Write 3 unit tests to test the API (one for the GET and two for POST, one that tests each prediction).
 
-# API Deployment
-* Create a free Heroku account (for the next steps you can either use the web GUI or download the Heroku CLI).
-* Create a new app and have it deployed from your GitHub repository.
-    * Enable automatic deployments that only deploy if your continuous integration passes.
-    * Hint: think about how paths will differ in your local environment vs. on Heroku.
-    * Hint: development in Python is fast! But how fast you can iterate slows down if you rely on your CI/CD to fail before fixing an issue. I like to run flake8 locally before I commit changes.
-* Write a script that uses the requests module to do one POST on your live API.
-
-# Deploying on Heroku through CLI 
+# Deploying on Heroku API through CLI 
 
 * shell 
 ```shell

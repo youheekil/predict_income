@@ -110,14 +110,31 @@ git add .gitignore ./model/xgboost.pkl
 
 # Deploying on Heroku through CLI 
 
+* shell 
 ```shell
 > heroku
 > heroku create
 > heroku apps
 > heroku create <app-name> --buildpack heroku/python 
 > heroku buildpacks --app <app-name>
-
 ```
+* git
+```shell
+> git status
+> git add *
+> git commit -m "heroku setup"
+> git branch # check branch of git
+> git push heroku main
+```
+* shell 
+```shell
+> heroku run bash --app income-prediction-ml-yh
+# running heroku
+> pwd # check current work directory
+> ls
+> exit # exit the heroku
+```
+
 
 
 # confusion matrix

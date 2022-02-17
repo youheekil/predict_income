@@ -100,13 +100,13 @@ git add .gitignore ./model/xgboost.pkl
      This model should contain an example.
 - Write 3 unit tests to test the API (one for the GET and two for POST, one that tests each prediction).
 
-# Create Procfile 
+# Deploying on Heroku API through CLI 
+
+* Create Procfile 
 Procfile is to give heroku command on what should be running (without extension)
 
-# Create runtime.txt
+* Create runtime.txt
 runtime.txt is to specify which python version you are running. 
-
-# Deploying on Heroku API through CLI 
 
 * shell 
 ```shell
@@ -116,6 +116,7 @@ runtime.txt is to specify which python version you are running.
 > heroku create <app-name> --buildpack heroku/python 
 > heroku buildpacks --app <app-name>
 ```
+
 * git
 ```shell
 > git status
@@ -124,6 +125,7 @@ runtime.txt is to specify which python version you are running.
 > git branch # check branch of git
 > git push heroku main
 ```
+
 * shell 
 ```shell
 > heroku run bash --app income-prediction-ml-yh
@@ -133,23 +135,29 @@ runtime.txt is to specify which python version you are running.
 > exit # exit the heroku
 ```
 
+# Final
+You can check my API here: 
 
+- click the link (https://income-prediction-ml-yh.herokuapp.com/docs)
 
-# confusion matrix
-```python 
-#importing confusion matrix
-from sklearn.metrics import confusion_matrix
+- click `POST` -> `prediction` -> `Try it out`
+- play with it !
 
-def plot_confusion_matrix(cm, classes, normalized=True, cmap='BuPu'):
-    plt.figure(figsize=[10, 8])
-    norm_cm = cm
-    if normalized:
-        norm_cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
-        sns.heatmap(norm_cm, annot=cm, fmt='g', xticklabels=classes, yticklabels=classes, cmap=cmap)
+OR 
 
+- clone current github repository
 
-cm = confusion_matrix(y_test, predictions)
-#call the confusion matrix function         
-plot_confusion_matrix(cm, ['class1', 'class2', 'class3','class4'])
+- DATA CLEANING STEP
+```shell
+python main.py --action data_mining 
 ```
 
+- PREDICTING STEP
+```shell
+python main.py --action predicting 
+```
+
+- ALL STEP 
+```shell
+python main.py --action all 
+```

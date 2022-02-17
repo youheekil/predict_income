@@ -5,29 +5,10 @@ Tesing Heroku App test
 import requests
 
 
-response_get = requests.get('/')
+url = "https://income-prediction-ml-yh.herokuapp.com/prediction?age=45&workclass=Self-emp-inc&fnlgt=40&education=Prof-school&education_num=14&marital_status=Separated&occupation=Sales&relationship=Not-in-family&race=White&sex=Male&capital_gain=10000&capital_loss=1000&hours_per_week=45&native_country=United-States"
 
-url = "https://income-prediction-ml-yh.herokuapp.com/prediction?"\
-        "age=32&"\
-            "workclass=Private&"\
-                "fnlgt=34&"\
-                    "education=Some-college&education_num=45&"\
-                        "marital_status=Married-civ-spouse&"\
-                            "occupation=Exec-managerial&"\
-                                "relationship=Husband&"\
-                                    "race=White&"\
-                                        "sex=Male&"\
-                                            "capital_gain=10000&"\
-                                                "capital_loss=12&"\
-                                                    "hours_per_week=60&"\
-                                                        "native_country=United-States"
-
-response_post = requests.post(url)
+response_post = requests.request("POST", url)
 
 
-print(response_get.status_code)
-print(response_get.json())
-
-print(response_post.status_code)
-print(response_post.json())
+print(response_post)
 

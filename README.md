@@ -100,6 +100,12 @@ git add .gitignore ./model/xgboost.pkl
      This model should contain an example.
 - Write 3 unit tests to test the API (one for the GET and two for POST, one that tests each prediction).
 
+# Create Procfile 
+Procfile is to give heroku command on what should be running (without extension)
+
+# Create runtime.txt
+runtime.txt is to specify which python version you are running. 
+
 # Deploying on Heroku API through CLI 
 
 * shell 

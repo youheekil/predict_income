@@ -2,4 +2,4 @@
     remote = storage
     autostage = true
 ['remote "storage"']
-    url = s3://youheekil/dvcstore/data
+    url = s3://youheekil

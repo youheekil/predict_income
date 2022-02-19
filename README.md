@@ -10,7 +10,7 @@ source venv/bin/activate
 
 # Install all dependencies of this file.
 
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 > Set up git and dvc
 
@@ -39,7 +39,7 @@ dvc remote list
 * Set up a remote repository for dvc.
 mybucket name is youheekil
 ```bash
-dvc remote add -d storage s3://youheekil/dvcstore
+dvc remote add -d storage s3://youheekil
 git add .dvc/config
 git commit -m "Configure remote storage"
 ```
@@ -89,7 +89,14 @@ pytest src/model_test.py
 ```
 ```shell
 dvc add ./model/xgboost.pkl
-git add .gitignore ./model/xgboost.pkl
+git add .gitignore ./model/xgboost.pkl && git commit -m "model file added"
+dvc push
+```
+
+```shell
+dvc add ./model/encoder.joblib
+git add .gitignore ./model/encoder.joblib && git commit -m "model file added"
+dvc push
 ```
 * Details of the model can be found in a model card (document/model_card_template.md)
 

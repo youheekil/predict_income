@@ -13,7 +13,7 @@ This model was to predict the salary of a person based on a some attributes abou
 ## Evaluation Data
 20% of the ingested data. The original source of the data is https://archive.ics.uci.edu/ml/datasets/census+income. 
 ## Metrics
-_Please include the metrics used and your model's performance on those metrics._
+
 The model evaluationi metrics were accuracy, precision, recall, and F1.
 
 * precision: 0.785828025477707
@@ -22,6 +22,8 @@ The model evaluationi metrics were accuracy, precision, recall, and F1.
 * accuracy: 0.8717056190949776
 
 ## Ethical Considerations
+
+The data contains race, nationality, gender, education level, and marital status. Prediction or data analysis based on the dataset might lead to potential discrimination. 
 
 ## Caveats and Recommendations
 GridSearchCV with XGBoost took really long time, because XGBoost has many tuning parameters so an exhaustive grid search has an unreasonable number of combination. In the future, creating a function to tune reduced sets of parameters using grid search and use early stopping will be recommended. 

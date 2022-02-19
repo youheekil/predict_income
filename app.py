@@ -1,5 +1,8 @@
 # from concurrent.futures import process
 from fastapi import FastAPI
+from pydantic import BaseModel
+from typing import Literal
+import numpy as np
 import uvicorn
 from enum import Enum
 import pandas as pd 
@@ -9,6 +12,49 @@ from src.model import inference
 
 app = FastAPI(debug = True)
 
+
+class Info(BaseModel):
+    age: int
+    workclass: Literal[
+        'State-gov', 'Self-emp-not-inc', 'Private', 'Federal-gov',
+        'Local-gov', 'Self-emp-inc', 'Without-pay']
+    fnlgt: int
+    education: Literal[
+        'Bachelors', 'HS-grad', '11th', 'Masters', '9th',
+        'Some-college',
+        'Assoc-acdm', '7th-8th', 'Doctorate', 'Assoc-voc', 'Prof-school',
+        '5th-6th', '10th', 'Preschool', '12th', '1st-4th']
+    education_num: int
+    marital_status: Literal[
+        'Never-married', 'Married-civ-spouse', 'Divorced',
+        'Married-spouse-absent', 'Separated', 'Married-AF-spouse',
+        'Widowed']
+    occupation: Literal[
+        'Adm-clerical', 'Exec-managerial', 'Handlers-cleaners',
+        'Prof-specialty', 'Other-service', 'Sales', 'Transport-moving',
+        'Farming-fishing', 'Machine-op-inspct', 'Tech-support',
+        'Craft-repair', 'Protective-serv', 'Armed-Forces',
+        'Priv-house-serv']
+    relationship: Literal[
+        'Not-in-family', 'Husband', 'Wife', 'Own-child',
+        'Unmarried', 'Other-relative']
+    race: Literal[
+        'White', 'Black', 'Asian-Pac-Islander', 'Amer-Indian-Eskimo',
+        'Other']
+    sex: Literal['Male', 'Female']
+    capital_gain: int
+    capital_loss: int
+    hours_per_week: int
+    native_country: Literal[
+        'United-States', 'Cuba', 'Jamaica', 'India', 'Mexico',
+        'Puerto-Rico', 'Honduras', 'England', 'Canada', 'Germany', 'Iran',
+        'Philippines', 'Poland', 'Columbia', 'Cambodia', 'Thailand',
+        'Ecuador', 'Laos', 'Taiwan', 'Haiti', 'Portugal',
+        'Dominican-Republic', 'El-Salvador', 'France', 'Guatemala',
+        'Italy', 'China', 'South', 'Japan', 'Yugoslavia', 'Peru',
+        'Outlying-US(Guam-USVI-etc)', 'Scotland', 'Trinadad&Tobago',
+        'Greece', 'Nicaragua', 'Vietnam', 'Hong', 'Ireland', 'Hungary',
+        'Holand-Netherlands']
 class Workclass(str, Enum):
     PRIVATE = "Private", 
     SELF_EMP_NOT_INC = "Self-emp-not-inc", 
@@ -138,7 +184,36 @@ async def read_main():
     return {"msg": "Hello World"}
 
 
-@app.post('/prediction' )
+@app.post('/prediction')
+async def predict_income(info: Info):
+    data = {'age': [info.age], 
+            'fnlgt':[info.fnlgt], 
+            'workclass': [info.workclass], 
+            'education': [info.education], 
+            'education_num': [info.education_num], 
+            'marital_status': [info.marital_status], 
+            'occupation': [info.occupation], 
+            'relationship': [info.relationship], 
+            'race': [info.race], 
+            'sex': [info.sex], 
+            'capital_gain': [info.capital_gain], 'capital_loss': [info.capital_loss], 
+            'hours_per_week': [info.hours_per_week], 
+            'native_country': [info.native_country]}
+
+
+    df_temp = pd.DataFrame.from_dict(data)
+
+    X, _, _, _ = process_data(
+                df_temp,
+                categorical_features=get_cat_features(),
+                encoder=_encoder, lb=_lb, training=False)
+    pred = inference(_model, X)
+    y = _lb.inverse_transform(pred)[0]
+    
+    return {"Predicted Salary: ": y}
+
+
+@app.post('/prediction_enum' )
 async def create_prediction(
     age: int, 
     workclass: Workclass, 

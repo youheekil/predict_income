@@ -1,0 +1,4 @@
+outs:
+- md5: 28fce909bcd70940bfa5c9419053d97f
+  size: 387899
+  path: xgboost.pkl

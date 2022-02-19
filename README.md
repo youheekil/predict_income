@@ -135,36 +135,10 @@ runtime.txt is to specify which python version you are running.
 
 * shell 
 ```shell
-> heroku run bash --app income-prediction-ml-yh
+> heroku run bash --app mlops-income-pred
 # running heroku
 > pwd # check current work directory
 > ls
 > exit # exit the heroku
 ```
 
-# Final
-You can check my API here: 
-
-- click the link (https://income-prediction-ml-yh.herokuapp.com/docs)
-
-- click `POST` -> `prediction` -> `Try it out`
-- play with it !
-
-OR 
-
-- clone current github repository
-
-- DATA CLEANING STEP
-```shell
-python main.py --action data_mining 
-```
-
-- PREDICTING STEP
-```shell
-python main.py --action predicting 
-```
-
-- ALL STEP 
-```shell
-python main.py --action all 
-```

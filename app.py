@@ -14,37 +14,37 @@ app = FastAPI(debug = True)
 
 
 class Info(BaseModel):
-    age: int
+    age: int = '42'
     workclass: Literal[
         'State-gov', 'Self-emp-not-inc', 'Private', 'Federal-gov',
-        'Local-gov', 'Self-emp-inc', 'Without-pay']
-    fnlgt: int
+        'Local-gov', 'Self-emp-inc', 'Without-pay'] = 'Private'
+    fnlgt: int = 2334
     education: Literal[
         'Bachelors', 'HS-grad', '11th', 'Masters', '9th',
         'Some-college',
         'Assoc-acdm', '7th-8th', 'Doctorate', 'Assoc-voc', 'Prof-school',
-        '5th-6th', '10th', 'Preschool', '12th', '1st-4th']
-    education_num: int
+        '5th-6th', '10th', 'Preschool', '12th', '1st-4th'] = 'Bachelors'
+    education_num: int = 13
     marital_status: Literal[
         'Never-married', 'Married-civ-spouse', 'Divorced',
         'Married-spouse-absent', 'Separated', 'Married-AF-spouse',
-        'Widowed']
+        'Widowed'] = 'Never-married'
     occupation: Literal[
         'Adm-clerical', 'Exec-managerial', 'Handlers-cleaners',
         'Prof-specialty', 'Other-service', 'Sales', 'Transport-moving',
         'Farming-fishing', 'Machine-op-inspct', 'Tech-support',
         'Craft-repair', 'Protective-serv', 'Armed-Forces',
-        'Priv-house-serv']
+        'Priv-house-serv'] = 'Prof-specialty'
     relationship: Literal[
         'Not-in-family', 'Husband', 'Wife', 'Own-child',
-        'Unmarried', 'Other-relative']
+        'Unmarried', 'Other-relative'] = 'Wife'
     race: Literal[
         'White', 'Black', 'Asian-Pac-Islander', 'Amer-Indian-Eskimo',
-        'Other']
-    sex: Literal['Male', 'Female']
-    capital_gain: int
-    capital_loss: int
-    hours_per_week: int
+        'Other'] = 'Black'
+    sex: Literal['Male', 'Female'] = 'Female'
+    capital_gain: int = 2174
+    capital_loss: int = 0
+    hours_per_week: int = 60
     native_country: Literal[
         'United-States', 'Cuba', 'Jamaica', 'India', 'Mexico',
         'Puerto-Rico', 'Honduras', 'England', 'Canada', 'Germany', 'Iran',
@@ -54,7 +54,7 @@ class Info(BaseModel):
         'Italy', 'China', 'South', 'Japan', 'Yugoslavia', 'Peru',
         'Outlying-US(Guam-USVI-etc)', 'Scotland', 'Trinadad&Tobago',
         'Greece', 'Nicaragua', 'Vietnam', 'Hong', 'Ireland', 'Hungary',
-        'Holand-Netherlands']
+        'Holand-Netherlands'] = 'Cuba'
 class Workclass(str, Enum):
     PRIVATE = "Private", 
     SELF_EMP_NOT_INC = "Self-emp-not-inc", 

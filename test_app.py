@@ -94,7 +94,7 @@ def test_prediction_enum():
 
 
 def test_prediction_error():
-    r = client.post("http://0.0.0.0:8000/prediction?" \
+    r = client.post("http://0.0.0.0:8000/prediction_enum?" \
     "age=32&"\
         "workclass=Private&"\
             "fnlgt=34&"\

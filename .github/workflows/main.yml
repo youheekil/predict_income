@@ -52,12 +52,11 @@ jobs:
         uses: iterative/setup-dvc@v1
         
       - name: Run Flake8
-        run: pip install flake8
-            flake8
-            
-      - name: Run pytest
-        run: pip install pytest
-            pytest
+        run: flake8
     
+    
+      - name: Run pytest
+        run: pytest
+            
       - name: Pull data from DVC
         run: dvc pull

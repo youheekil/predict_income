@@ -1,4 +1,4 @@
-# udacity_c3_cencus
+# Income prediction based on Census data
 ML pipeline to expose API on Heroku
 
 ## Repositories

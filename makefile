@@ -16,9 +16,6 @@ install: # install dependencies
 flake8: 
 	flake8
 
-pytest:
-	pytest
-
 clean:
 	rm -rf __pycache__
 	rm -rf $(VENV)

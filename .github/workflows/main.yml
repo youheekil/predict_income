@@ -58,4 +58,4 @@ jobs:
         run: pip install flake8; make flake8
     
       - name: Run pytest
-        run: pip install pytest; make pytest
+        run: pip install pytest; pytest

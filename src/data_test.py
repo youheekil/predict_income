@@ -4,9 +4,9 @@
 # LOAD ENCODING, LIB ETC
 import logging
 import pandas as pd
-from joblib import dump, load
+from joblib import dump
 from pytest import fixture
-from src.data import get_cat_features, split_data, process_data
+from src.data import get_cat_features, process_data
 
 FORMAT = "%(asctime)s | %(name)s - %(levelname)s - %(message)s"
 LOG_FILEPATH = "logs/testing.log/"

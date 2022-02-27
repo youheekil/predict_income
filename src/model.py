@@ -2,16 +2,10 @@
 """
 This script trains with XGBOOST model
 """
-
-import os
 from joblib import dump, load
-import pandas as pd
 from xgboost import XGBClassifier
-from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import fbeta_score, precision_score, recall_score
-from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-from sklearn.ensemble import RandomForestClassifier
 
 from src.data import get_cat_features, process_data
 

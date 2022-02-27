@@ -1,6 +1,5 @@
 import logging 
 from joblib import load
-from src.model import train_model
 
 
 FORMAT = "%(asctime)s | %(name)s - %(levelname)s - %(message)s"

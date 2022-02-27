@@ -2,10 +2,6 @@
 
 import pandas as pd
 import logging
-from joblib import load
-import pytest
-
-import src.config as config
 from src.clean_data import clean_data, removing_NA, removing_special_case
 
 FORMAT = "%(asctime)s | %(name)s - %(levelname)s - %(message)s"

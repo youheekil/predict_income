@@ -5,13 +5,10 @@ cleaning messy data
 author : Youhee
 data: Jan 2022
 """
-
-
 # libraries
 import numpy as np
 import pandas as pd
 from re import search
-
 import src.config as config
 from src.data import get_cat_features
 
@@ -70,7 +67,6 @@ def removing_NA(data):
     data = data.dropna()
     data.to_csv(config.CLEAN_DATA_FILE, index = False, header = True)
     return data
-
 
 def run_clean_data():
         df = clean_data()

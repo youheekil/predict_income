@@ -1,12 +1,8 @@
 # src/data.py
 
 import numpy as np
-import pandas as pd
-
 from sklearn.preprocessing import LabelBinarizer, OneHotEncoder
 from sklearn.model_selection import train_test_split
-
-from joblib import dump, load
 
 
 def get_cat_features():
@@ -28,13 +24,12 @@ def get_cat_features():
     return cat_features
 
 
-def split_data(data, test_size:int ):
+def split_data(data, test_size:int):
     train, test = train_test_split(data, test_size = test_size)
     return train, test
 
 
-def process_data(
-    X, categorical_features=[], label=None, training=True, encoder=None, lb=None):
+def process_data(X, categorical_features=[], label=None, training=True, encoder=None, lb=None):
     """ Process the data used in the machine learning pipeline.
 
     Processes the data using one hot encoding for the categorical features and a

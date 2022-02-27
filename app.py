@@ -2,7 +2,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import Literal
-import numpy as np
 import uvicorn
 from enum import Enum
 import pandas as pd 
@@ -213,7 +212,7 @@ async def predict_income(info: Info):
     return {"Predicted Salary: ": y}
 
 
-@app.post('/prediction_enum' )
+@app.post('/prediction_enum')
 async def create_prediction(
     age: int, 
     workclass: Workclass, 
@@ -229,7 +228,6 @@ async def create_prediction(
     capital_loss: int, 
     hours_per_week: int, 
     native_country: Native_Country):
-
     data = {'age': [age], 
             'fnlgt':[fnlgt], 
             'workclass': [workclass], 

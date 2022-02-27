@@ -34,7 +34,7 @@ def run_train_model():
     # Proces the test data with the process_data function.
 
     X_test, y_test, _, _ = process_data(test, categorical_features=cat_features, label="salary", encoder=encoder, lb=lb,
-    training=False )
+    training=False)
 
     # Train and save a model.
     _model = train_model(X_train = X_train, y_train = y_train)

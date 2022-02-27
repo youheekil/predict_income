@@ -13,8 +13,8 @@ install: # install dependencies
 	$(PIP) install --upgrade pip
 	$(PIP) install -r requirements.txt
 
-lint: 
-	pylint --disable=R,C main.py
+flake8: 
+	flake8
 
 test:
 	pytest

@@ -16,7 +16,7 @@ install: # install dependencies
 flake8: 
 	flake8
 
-test:
+pytest:
 	pytest
 
 clean:

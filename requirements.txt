@@ -28,9 +28,3 @@ xgboost==1.5.2
 zipp==3.6.0
 uvicorn==0.17.1
 fastapi==0.73.0
-<<<<<<< HEAD
-
-=======
-pytest==7.0.1
-flake8==4.0.1
->>>>>>> c61a35c (github action edited)

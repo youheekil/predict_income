@@ -8,6 +8,7 @@ import pandas as pd
 from joblib import load
 from src.data import process_data, get_cat_features
 from src.model import inference
+import os
 
 app = FastAPI(debug = True)
 

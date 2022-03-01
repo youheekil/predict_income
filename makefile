@@ -13,8 +13,11 @@ install: # install dependencies
 	$(PIP) install --upgrade pip
 	$(PIP) install -r requirements.txt
 
-flake8: 
+flake8: $(VENV)/bin/activate 
 	flake8
+
+pytest:
+	pytest
 
 clean:
 	rm -rf __pycache__

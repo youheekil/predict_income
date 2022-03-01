@@ -20,7 +20,6 @@ flake8:
 	flake8
 
 pytest: 
-	source $(VENV)/bin/activate
 	python3 -m pytest
 
 

@@ -15,11 +15,11 @@ install: # install dependencies
 
 
 flake8: 
-	$(VENV)/bin/activate
+	source $(VENV)/bin/activate
 	flake8
 
 pytest: 
-	$(VENV)/bin/activate
+	source $(VENV)/bin/activate
 	python3 -m pytest
 
 clean:

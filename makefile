@@ -14,11 +14,13 @@ install: # install dependencies
 	$(PIP) install -r requirements.txt
 
 
-flake8: $(VENV)/bin/activate
+flake8: 
+	$(VENV)/bin/activate
 	flake8
 
-pytest: $(VENV)/bin/activate
-        python3 -m pytest
+pytest: 
+	$(VENV)/bin/activate
+	python3 -m pytest
 
 clean:
 	rm -rf __pycache__

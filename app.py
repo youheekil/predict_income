@@ -8,6 +8,7 @@ import pandas as pd
 from joblib import load
 from src.data import process_data, get_cat_features
 from src.model import inference
+import os
 
 app = FastAPI(debug = True)
 
@@ -172,6 +173,15 @@ class Native_Country(str, Enum):
     IRELAND = 'Ireland', 
     HUNGARY = 'Hungary',
     HOLAND_NETHERLANDS = 'Holand-Netherlands'
+
+    
+    
+if "DYNO" in os.environ and os.path.isdir(".dvc"):
+    os.system("dvc config core.no_scm true")
+    if os.system("dvc pull") != 0:
+        exit("dvc pull failed")
+    os.system("rm -r .dvc .apt/usr/lib/dvc")
+
 
 _encoder = load("model/encoder.joblib")
 _lb = load("model/lb.joblib")

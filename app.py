@@ -173,9 +173,9 @@ class Native_Country(str, Enum):
     HUNGARY = 'Hungary',
     HOLAND_NETHERLANDS = 'Holand-Netherlands'
 
-_encoder = load("../model/encoder.joblib")
-_lb = load("../model/lb.joblib")
-_model = load("../model/xgboost.pkl")
+_encoder = load("model/encoder.joblib.dvc")
+_lb = load("model/lb.joblib.dvc")
+_model = load("model/xgboost.pkl.dvc")
 
 
 @app.get("/")

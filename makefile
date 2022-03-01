@@ -16,7 +16,7 @@ install: # install dependencies
 flake8: $(VENV)/bin/activate 
 	flake8
 
-pytest:
+pytest: python -m pytest;
 	pytest
 
 clean:
